@@ -48,8 +48,8 @@ module.exports = function (grunt) {
                 tasks: ['react:app']
             },
             styles: {
-                files: ['<%= yeoman.app %>/styles/{,*/}*.css'],
-                tasks: ['newer:copy:styles', 'autoprefixer']
+                files: ['<%= yeoman.app %>/styles/{,*/}*.{scss, sass}'],
+                tasks: ['compass', 'autoprefixer']
             },
             livereload: {
                 options: {
@@ -264,6 +264,19 @@ module.exports = function (grunt) {
         //     dist: {}
         // },
 
+        compass: {
+          options: {
+            sassDir: '<%= yeoman.app %>/styles',
+            cssDir: '.tmp/styles'
+          },
+          dev: {
+            environment: 'development'
+          },
+          dist: {
+            environment: 'production'
+          }
+        },
+
         // Copies remaining files to places other tasks can use
         copy: {
             dist: {
@@ -307,13 +320,13 @@ module.exports = function (grunt) {
         // Run some tasks in parallel to speed up build process
         concurrent: {
             server: [
-                'copy:styles'
+                'compass:dev',
             ],
             test: [
-                'copy:styles'
+                'compass:dev',
             ],
             dist: [
-                'copy:styles',
+                'compass:dist',
                 'react:app',
                 'imagemin',
                 'svgmin',
