@@ -190,7 +190,7 @@ module.exports = function (grunt) {
         // Performs rewrites based on rev and the useminPrepare configuration
         usemin: {
             options: {
-                assetsDirs: ['<%= yeoman.dist %>']
+                assetsDirs: ['<%= yeoman.dist %>', '<%= yeoman.dist %>/images']
             },
             html: ['<%= yeoman.dist %>/{,*/}*.html'],
             css: ['<%= yeoman.dist %>/styles/{,*/}*.css']
@@ -267,7 +267,8 @@ module.exports = function (grunt) {
         compass: {
           options: {
             sassDir: '<%= yeoman.app %>/styles',
-            cssDir: '.tmp/styles'
+            cssDir: '.tmp/styles',
+            imagesDir: '<%= yeoman.app %>/images'
           },
           dev: {
             environment: 'development'

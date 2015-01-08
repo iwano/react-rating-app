@@ -20,18 +20,17 @@
   }
 
   label {
-    background: blue;
+    background: url('../images/stars.png') 0 0 repeat-x;
     cursor: pointer;
     display: inline-block;
-    height: 20px;
-    margin: 0 5px;
-    width: 20px;
+    height: 26px;
+    width: 27px;
     &:hover {
-      background: red;
+      background-position: 0 -25px;
     }
   }
 
   input:checked + label{
-    background: red;
+    background-position: 0 -51px;
   }
 }
