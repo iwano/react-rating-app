@@ -24,11 +24,21 @@
     cursor: pointer;
     display: inline-block;
     height: 26px;
+    margin: 0px 2px;
     width: 27px;
     &:hover {
       background-position: 0 -25px;
     }
   }
+
+  &.hovered label {
+    background-position: 0 -25px;
+  }
+
+  &.active label {
+    background-position: 0 -51px;
+  }
+
 
   input:checked + label{
     background-position: 0 -51px;
