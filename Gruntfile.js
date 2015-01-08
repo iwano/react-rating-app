@@ -268,7 +268,10 @@ module.exports = function (grunt) {
           options: {
             sassDir: '<%= yeoman.app %>/styles',
             cssDir: '.tmp/styles',
-            imagesDir: '<%= yeoman.app %>/images'
+            imagesDir: '<%= yeoman.app %>/images',
+            httpImagesPath: '/images',
+            relativeAssets: false,
+            assetCacheBuster: false
           },
           dev: {
             environment: 'development'
