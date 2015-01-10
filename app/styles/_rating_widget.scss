@@ -13,6 +13,18 @@
   }
 }
 
+.yellow-star {
+  background-position: 0 -25px;
+}
+
+.orange-star {
+  background-position: 0 -51px;
+}
+
+.gray-star {
+  background-position: 0 0;
+}
+
 .rating-star {
   float: left;
 
@@ -23,16 +35,16 @@
     height: 26px;
     width: 27px;
     &:hover {
-      background-position: 0 -25px;
+      @extend .yellow-star;
     }
     &.hovered {
-      background-position: 0 -25px;
+      @extend .yellow-star;
     }
     &.active {
-      background-position: 0 -51px;
+      @extend .orange-star;
     }
     &.inactive {
-      background-position: 0 0;
+      @extend .gray-star;
     }
   }
 

@@ -76,15 +76,6 @@ var RatingBox = React.createClass({
     this.setState({rating: rating});
   },
 
-  setHoveredRating: function(rating) {
-    this.setState({selectedRating: rating});
-
-  },
-
-  isActive: function(rating) {
-    return this.state.selectedRating > rating ? 'active' : 'not-active';
-  },
-
   render: function() {
     return (
       <div className="rating-box">
