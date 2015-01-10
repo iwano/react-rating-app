@@ -1,7 +1,0 @@
-{
-  "name": "rating-app",
-  "version": "0.0.0",
-  "dependencies": {
-    "statik": "~1.2.5"
-  }
-}
